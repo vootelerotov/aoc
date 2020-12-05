@@ -1,8 +1,6 @@
 package com.github.vootelerotov.aoc2020
 
 import com.github.vootelerotov.util.Util
-import java.io.File
-import java.lang.Exception
 import java.lang.IllegalArgumentException
 
 fun main(args: Array<String>) {
