@@ -2,6 +2,7 @@ package com.github.vootelerotov.util
 
 import java.io.File
 import java.lang.IllegalArgumentException
+import java.math.BigInteger
 import java.util.function.Predicate
 
 class Util {
@@ -36,5 +37,21 @@ class Util {
 
             return acc;
         }
+
+         fun recursiveProofComputeIfAbsent(
+            map: MutableMap<Int, BigInteger>,
+            key: Int,
+            function: () -> BigInteger
+        ): BigInteger {
+            val cachedValue = map[key]
+            return if (cachedValue != null) {
+                cachedValue
+            } else {
+                val value = function.invoke()
+                map.putIfAbsent(key, value)
+                value
+            }
+        }
     }
 }
+
