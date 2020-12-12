@@ -11,4 +11,10 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testCompile "org.junit.jupiter:junit-jupiter-engine:5.7.0"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.7.0"
+}
+
+test {
+    useJUnitPlatform()
 }
