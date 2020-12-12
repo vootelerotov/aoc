@@ -52,6 +52,8 @@ class Util {
                 value
             }
         }
+
+        fun <T, S> crossProduct(first: Collection<T>, second: Collection<S>) = first.flatMap { x -> second.map { y -> x to y} }
     }
 }
 
